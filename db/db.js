@@ -4,10 +4,10 @@ const PostoModel = require('../models/posto');
 
 const sequelize = new Sequelize({
   dialect: 'postgres',
-  host: 'itcpostgresql.postgres.database.azure.com',
-  username: 'bertha',
-  password: '%&unsas_aew27002',
-  database: 'db002',
+  host: '',
+  username: '',
+  password: '',
+  database: '',
   dialectOptions: {
     ssl: {
       require: true,

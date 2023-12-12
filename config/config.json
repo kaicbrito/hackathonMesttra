@@ -1,10 +1,10 @@
 
 {
     "development": {
-      "username": "bertha",
-      "password": "%&unsas_aew27002",
-      "database": "db002",
-      "host": "itcpostgresql.postgres.database.azure.com",
+      "username": "",
+      "password": "",
+      "database": "",
+      "host": "",
       "dialect": "postgres",
       "schema": "public",
       "dialectOptions": {
@@ -15,10 +15,10 @@
       }
     },
     "test": {
-        "username": "bertha",
-        "password": "%&unsas_aew27002",
-        "database": "db002",
-        "host": "itcpostgresql.postgres.database.azure.com",
+        "username": "",
+        "password": "",
+        "database": "",
+        "host": "",
         "dialect": "postgres",
         "dialectOptions": {
           "ssl": {
@@ -28,10 +28,10 @@
       }
     },
     "production": {
-      "username": "bertha",
-      "password": "%&unsas_aew27002",
-      "database": "db002",
-      "host": "itcpostgresql.postgres.database.azure.com",
+      "username": "",
+      "password": "",
+      "database": "",
+      "host": "",
       "dialect": "postgres",
       "ssl": true,
       "dialectOptions": {

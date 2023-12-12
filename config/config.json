@@ -1,0 +1,44 @@
+
+{
+    "development": {
+      "username": "bertha",
+      "password": "%&unsas_aew27002",
+      "database": "db002",
+      "host": "itcpostgresql.postgres.database.azure.com",
+      "dialect": "postgres",
+      "schema": "public",
+      "dialectOptions": {
+        "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+        }
+      }
+    },
+    "test": {
+        "username": "bertha",
+        "password": "%&unsas_aew27002",
+        "database": "db002",
+        "host": "itcpostgresql.postgres.database.azure.com",
+        "dialect": "postgres",
+        "dialectOptions": {
+          "ssl": {
+            "require": true,
+            "rejectUnauthorized": false
+        }
+      }
+    },
+    "production": {
+      "username": "bertha",
+      "password": "%&unsas_aew27002",
+      "database": "db002",
+      "host": "itcpostgresql.postgres.database.azure.com",
+      "dialect": "postgres",
+      "ssl": true,
+      "dialectOptions": {
+        "ssl": {
+          "require": true,
+          "rejectUnauthorized": false
+        }
+      }
+    }
+  }

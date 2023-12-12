@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interface da API</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #postoForm {
+      margin-bottom: 20px;
+    }
+
+    #resultado {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Interface da API</h1>
+
+  <form id="postoForm">
+    <label for="endereco">Endereço:</label>
+    <input type="text" id="endereco" name="endereco" required>
+    <button type="button" onclick="pesquisarPosto()">Pesquisar Posto</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    async function pesquisarPosto() {
+      const endereco = document.getElementById('endereco').value;
+
+      try {
+        const response = await fetch(`http://localhost:3000/postos/pesquisa/${endereco}`);
+        const data = await response.json();
+
+        // Atualize a interface com os dados da API
+        const resultadoDiv = document.getElementById('resultado');
+        resultadoDiv.innerHTML = `<h2>Resultado da Pesquisa</h2>
+                                  <p>Endereço: ${data.endereco}</p>
+                                  <p>Rede: ${data.rede}</p>`;
+      } catch (error) {
+        console.error('Erro ao buscar posto:', error.message);
+        const resultadoDiv = document.getElementById('resultado');
+        resultadoDiv.innerHTML = '<p>Erro ao buscar posto. Verifique o endereço informado.</p>';
+      }
+    }
+  </script>
+</body>
+</html>
